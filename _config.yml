@@ -1,0 +1,71 @@
+# Site Info
+title: "The HackingPheasant's Blog"
+tagline: "My little nest on the internet!"
+description: "My little nest on the internet! Opinions and views are my own."
+url: "https://HackingPheasant.github.io"
+baseurl: ""
+logo: ""
+
+# Site configurations
+feed:
+  path: atom.xml
+paginate: 10 # amount of posts to show
+paginate_path: "/blog/page:num"
+permalink: /blog/:year/:month/:day/:title
+include: ['_pages']
+sass:
+  sass_dir: _sass
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+
+# About/contact
+author:
+  name: "HackingPheasant"
+  avatar: "/assets/images/bio-photo-hackingpheasant.jpg"
+  bio: "Just a Hacker & Tinkerer"
+  contact:
+    email: "HackingPheasant@protonmail.com"
+    twitter: hackingpheasant
+    github:  HackingPheasant
+
+# Build settings
+remote_theme: HackingPheasant/jekyll-theme-pheasants-nest
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji
+
+liquid:
+  error_mode: warn
+  strict_filters: true
+  #strict_variables: true
+
+
+# Github Pages settings. 
+# Cannot be changed. Just setting so we can mimic github pages
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
