@@ -26,7 +26,8 @@ author:
   bio: "Just a Hacker & Tinkerer"
   contact:
     email: "HackingPheasant@protonmail.com"
-    twitter: hackingpheasant
+  social:
+    twitter: HackingPheasant
     github:  HackingPheasant
 
 # Build settings
