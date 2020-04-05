@@ -29,6 +29,7 @@ author:
   social:
     twitter: HackingPheasant
     github:  HackingPheasant
+    # linkedin: username
 
 # Build settings
 remote_theme: HackingPheasant/jekyll-theme-pheasants-nest
