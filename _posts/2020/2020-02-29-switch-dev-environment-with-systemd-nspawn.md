@@ -30,6 +30,7 @@ pacman-key --init
 pacman-key --populate archlinux
 mount /dev/nvme0n1p5 /mnt
 pacstrap -i -c /mnt/home/hackingpheasant/arch-minimal-devkit64/ base base-devel --ignore linux --cachedir /mnt/tmp
+umount /mnt/
 exit
 ```
 
