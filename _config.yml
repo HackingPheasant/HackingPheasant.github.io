@@ -13,8 +13,6 @@ paginate: 10 # amount of posts to show
 paginate_path: "/blog/page:num"
 permalink: /blog/:year/:month/:day/:title
 include: ['_pages']
-sass:
-  sass_dir: _sass
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
