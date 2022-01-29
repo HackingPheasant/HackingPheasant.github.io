@@ -30,8 +30,6 @@ author:
     # linkedin: username
 
 # Build settings
-remote_theme: HackingPheasant/jekyll-theme-pheasants-nest
-
 plugins:
   - jekyll-feed
   - jekyll-gist
