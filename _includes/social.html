@@ -1,0 +1,41 @@
+{%- assign social = site.author.social -%}
+{%- assign displaynames = include.displaynames -%}
+
+<aside class="social-media-list">
+    {%- if social.github -%}
+    <div>
+        <a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}">
+            <svg class="svg-icon icon-grey">
+                <use href="/assets/images/icons/simple-icons.svg#github"></use>
+            </svg>
+        </a>
+        {%- if displaynames -%}
+        <small>{{ social.github | escape }}</small>
+        {%- endif -%}
+    </div>
+    {%- endif -%}
+    {%- if social.linkedin -%}
+    <div>
+        <a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" title="{{ social.linkedin | escape }}">
+            <svg class="svg-icon icon-grey">
+                <use href="/assets/images/icons/simple-icons.svg#linkedin"></use>
+            </svg>
+        </a>
+        {%- if displaynames -%}
+        <small>{{ social.linkedin | escape }}</small>
+        {%- endif -%}
+    </div>
+    {%- endif -%}
+    {%- if social.twitter -%}
+    <div>
+        <a rel="me" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }}">
+            <svg class="svg-icon icon-grey">
+                <use href="/assets/images/icons/simple-icons.svg#twitter"></use>
+            </svg>
+        </a>
+        {%- if displaynames -%}
+        <small>{{ social.twitter | escape }}</small>
+        {%- endif -%}
+    </div>
+    {%- endif -%}
+</aside>

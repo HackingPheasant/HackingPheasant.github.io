@@ -1,0 +1,39 @@
+{% comment %}
+Orignal Author: mnishiguchi
+https://github.com/mnishiguchi/mnishiguchi_2019/blob/master/_includes/related_posts.html
+Tweaked slightly for my use case
+
+1. Create an empty array, post_list
+2. Push to post_list all the posts that have at least one of the post's tags
+then the current post is excluded and list is made unique.
+
+Jekyll variables: https://jekyllrb.com/docs/variables/
+- site.posts     - A reverse chronological list of all Posts.
+- site.tags[TAG] - The list of all Posts with tag TAG.
+- page.tags      - The list of tags to which this post belongs.
+{% endcomment %}
+
+{% assign post_list = "" | split: "|" %}
+
+{% if page.tags %}
+{% for each_tag in page.tags %}
+{% for each_post in site.tags[each_tag] %}
+{% if each_post.title == page.title %}{% continue %}{% endif %}
+{% assign post_list = post_list | push: each_post %}
+{% endfor %}
+{% endfor %}
+{% assign post_list = post_list | uniq %}
+{% endif %}
+
+{% if post_list.size < 1 %}
+{% assign post_list = site.posts %}
+{% endif %}
+
+{% for post in site.related_posts limit:include.limit %}
+<h4>
+    <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+        <small>{{ post.date | date_to_string }}</small>
+    </a>
+</h4>
+{% endfor %}

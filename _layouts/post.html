@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+{% for tag in page.tags %}
+<small class="tag"> 
+    {{ tag | capitalize }}
+</small>
+{% endfor %}
+
+<article>
+    {{ content }}
+</article>
+
+{% if site.related_posts != empty %}
+<aside class="related_posts">
+    <h3>You may also enjoy</h3>
+    {% include related_posts.html posts=site.related_posts limit=4 %}
+</aside>
+{% endif %}

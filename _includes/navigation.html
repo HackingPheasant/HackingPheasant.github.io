@@ -1,0 +1,15 @@
+<nav>
+    {% assign links = site.data.navigation %}
+    {% for link in links %}
+    <div class="nav-list-item">
+        <a href="{{ link.url }}">{{ link.title }}</a>
+    </div>
+    {% if link.sublinks %}
+    {% for sublink in link.sublinks %}
+    <div class="nav-list-item sub-nav-list-item">
+        <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+</nav>

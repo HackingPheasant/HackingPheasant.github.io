@@ -1,0 +1,27 @@
+<footer>
+    <div id="footer-text">
+        {%- if site.author %}
+        <div class="contact-list">
+            {% if site.author.name -%}
+            <p class="author-name">{{ site.author.name | escape }}</p>
+            {% endif -%}
+            {% if site.author.email -%}
+            <p><a class="author-email" href="mailto:{{ site.author.contact.email }}">{{ site.author.contact.email }}</a></p>
+            {%- endif %}
+        </div>
+        {%- endif %}
+
+        <p>{{ site.description | escape }}</p>
+    </div>
+
+    <div id="footer-social">
+        {%- include social.html -%}
+        <div class="feed-subscribe">
+            <a href="{{ 'atom.xml' | relative_url }}">
+                <svg class="svg-icon icon-orange">
+                    <use href="{{ '/assets/images/icons/simple-icons.svg#rss' | relative_url }}"></use>
+                </svg><span>Subscribe</span>
+            </a>
+        </div>
+    </div>
+</footer>
