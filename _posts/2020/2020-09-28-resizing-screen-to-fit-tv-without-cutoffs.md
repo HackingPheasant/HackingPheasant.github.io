@@ -16,7 +16,7 @@ xrandr -q #To query curent info (--query also works)
 xrandr -s <num> #To change/test current options (use to figure out your wanted screensize) or
 xrandr --output <connected monitor name> --mode <name of mode> # same as above line, substitue required info with info from the query statement
 # Example usage of above two lines
-xrandr -s 2 to select the second option or it can be done like so
+xrandr -s 2 #To select the second option or it can be done like so
 xrandr --output HDMI-3 --mode 1280x720
 ```
 
